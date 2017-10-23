@@ -1,0 +1,1 @@
+{"version":3,"sources":["b.scss"],"names":[],"mappings":"AAEA;EACI,eAHkB;EAIlB,aAAY,EACf;;AAED;EACA,0BAAgB;UAAhB,kBAAgB,EACf","file":"b.css","sourcesContent":["$primary-color:#00FF2A;\r\n\r\nbody{\r\n    color:$primary-color;\r\n    padding: 5px;\r\n}\r\n\r\n.card{\r\nfilter:blur(3px)\r\n}"]}

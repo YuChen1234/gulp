@@ -1,0 +1,9 @@
+body {
+  color: #00FF2A;
+  padding: 5px; }
+
+.card {
+  -webkit-filter: blur(3px);
+          filter: blur(3px); }
+
+/*# sourceMappingURL=b.css.map */
