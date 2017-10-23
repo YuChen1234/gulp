@@ -1,0 +1,10 @@
+$primary-color:#1FF390;
+
+body{
+    color:$primary-color;
+    padding: 1px;
+}
+
+.card{
+filter:blur(3px)
+}

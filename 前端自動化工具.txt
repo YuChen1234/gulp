@@ -1,0 +1,309 @@
+Windows 與 Mac 安裝說明
+第 1 節，講座 2
+Nodejs 官方網站連結:
+https://nodejs.org/en/
+
+=== Windows 版本 ===
+
+指令說明：
+## Windows 指令
+# 回到資料夾頂端
+cd\ 
+
+# 回到上一層
+cd.. 
+
+# 進入資料夾路徑
+cd {?{ 資料夾路徑 }} 
+
+# Nodejs 版本
+node -v 
+
+# npm 版本
+npm -v 
+
+# 安裝 Global Gulp 環境
+npm install gulp -g 
+
+=== Mac OS 版本 ===
+
+## Mac OS 指令
+# 回到資料夾頂端
+cd \ 
+
+# 回到上一層
+cd .. 
+
+# 進入資料夾路徑
+cd {?{ 資料夾路徑 }} 
+
+
+
+
+
+# Nodejs 版本
+node -v 
+
+# npm 版本
+npm -v 
+
+# 安裝 Global Gulp 環境
+npm install gulp -g 
+
+# 如果無法安裝  Global Gulp 環境，請用以下並輸入系統密碼
+sudo npm install gulp -g 
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@2
+npm init
+npm install gulp --save
+npm install
+
+有沒有加入 -g 差異在哪裡呢？
+第 1 節，講座 6
+有沒有加入 -g 差異在哪裡呢？
+
+- 有加入 "-g"：這是安裝全域的套件
+也就是安裝在目前的電腦上
+目的是啟用 "gulp" 這個指令
+
+- 沒有加入：這是 local 套件安裝的指令
+是裝在目前的專案資料夾內
+目的是執行 gulp 時可以取用的套件
+
+---
+總結：只有 npm install gulp -g  才會使用到全域的指令
+在教學中， -g 也只會出現一次喔～
+
+其餘 gulp 套件只會用到 "npm install --save"，像是
+
+npm install gulp --save # gulp 這個套件在專案資料夾也需要載入一次喔
+npm install gulp-jade --save # 其它套件都不會用到 -g
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@2
+給正式環境
+npm install gulp-sass --save
+給開發環境
+npm install  --save-dev gulp-load-plugins
+
+@@@@@@@@@@@@@@@@@@@@@@@@
+
+課程使用的套件與相關連結
+第 2 節，講座 9
+課程使用到的套件列表
+
+gulp-jade
+- HTML 樣板語言
+https://www.npmjs.com/package/gulp-jade
+
+gulp-sass
+- 強大的 CSS 預處理器
+https://www.npmjs.com/package/gulp-sass
+
+gulp-plumber
+- 讓 Gulp 在運行的過程中遇錯不會中斷
+https://www.npmjs.com/package/gulp-plumber
+
+gulp-postcss
+- 強大的 CSS 後處理器
+https://www.npmjs.com/package/gulp-postcss
+
+autoprefixer
+- 自動為你的 CSS 補上前綴詞
+https://www.npmjs.com/package/autoprefixer
+
+gulp-load-plugins
+- 簡化 gulp 載入流程
+https://www.npmjs.com/package/gulp-load-plugins
+
+gulp-babel
+- JavaScript ES6 編譯工具
+https://www.npmjs.com/package/gulp-babel
+
+babel-preset-es2015
+- JavaScript ES6 編譯工具
+https://www.npmjs.com/package/babel-preset-es2015
+
+gulp-sourcemaps
+- 標示壓縮、合併程式碼的原始位置
+https://www.npmjs.com/package/gulp-sourcemaps
+
+gulp-concat
+- 合併串接程式碼
+https://www.npmjs.com/package/gulp-concat
+
+Browser Sync
+- 前端愛用的 Web Server
+- 包含 Livereload
+https://www.npmjs.com/package/browser-sync
+https://browsersync.io/docs
+
+main-bower-files
+- Bower 工具
+https://www.npmjs.com/package/main-bower-files
+
+gulp-minify-css
+- CSS 壓縮工具
+https://www.npmjs.com/package/gulp-minify-css
+
+gulp-uglify
+- JavaScript 壓縮工具
+https://www.npmjs.com/package/gulp-uglify
+
+minimist 
+- 將指令碼匯入 gulp 流程
+https://www.npmjs.com/package/minimist
+
+gulp-if
+- 將 gulp 加入判斷式
+https://www.npmjs.com/package/gulp-if
+
+ 
+瀏覽問答
+繼續
+
+
+   顯示課程導航 前往控制面板
+問題
+搜尋問題：
+搜尋問題
+此講座有 0 個問題
+
+提出一個新問題
+尚無問題
+成為首先提出問題的人！您將可以在下一步新增詳細資訊。
+
+問題詳細資料
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+npm install --save gulp-postcss autoprefixer
+
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+關於 Watch 的監控
+第 2 節，講座 14
+目前版本的 Watch 並無法監控到 "新增” 及 “刪除” 的檔案更動
+所以是新增的檔案下，是必須重啟 gulp 服務才能繼續監控
+或者是使用另一個 gulp-watch 套件
+https://www.npmjs.com/package/gulp-watch
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+npm install 
+npm install babel-preset-es2015 --save
+npm install --save gulp-sourcemaps gul-babel gulp-concat
+
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+Babel 套件補充說明
+第 2 節，講座 18
+各位同學好,
+
+gulp-babel 套件可能在更新時沒有加入核心套件
+導致在加入 babel 時可能會出現 cannot find module 'bable-core' 
+但不是所有環境都會遇到這樣的狀況
+
+如果發生此問題，
+可以手動加入此套件：
+
+npm install babel-core --save 
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+Bower 管理前端的套件
+Jquery管理工具，Bower的運用
+/前置安裝工具Node.js Bower
+//npm install bower -g
+//bower init
+//bower install jquery --save
+以後
+//bower install
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+Bower 額外補充說明
+第 2 節，講座 22
+並非所有套件對於 bower 的取用都那麼的友善
+以 Vue.js 來說，他就不會正確取得 dist 資料夾內的 vue.js
+此時可以透過自訂 mainBowerFiles 方式來作調整
+
+先安裝 vuejs 的套件
+$ bower install vue --save
+
+gulp 加入以下 overrides
+
+gulp.task('bower', function() {
+  return gulp.src(mainBowerFiles({
+    "overrides": {
+        "vue": {                       // 套件名稱
+            "main": "dist/vue.js"      // 取用的資料夾路徑
+        }
+    }
+  }))
+    .pipe(gulp.dest('./.tmp/vendors'));
+    cb(err);
+});
+另外，如果外部載入的套件如果需要排序
+可以透過另一個套件 gulp-order (https://www.npmjs.com/package/gulp-order)
+像是 Bootstrap 與 jQuery 會有前後相依的需求
+gulp-order 可以透過陣列排列自己所需要的順序
+
+gulp.task('vendorJs', ['bower'], function(){
+  return gulp.src(['./.tmp/vendors/**/**.js'])
+    .pipe($.order([
+      'jquery.js',
+      'bootstrap.js'
+    ]))
+    .pipe($.concat('vendor.js'))
+    .pipe(gulp.dest('./public/javascripts'))
+})
+
+npm install gulp-order --save
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+npm install browser-sync --save
+
+
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+gul-minify-css  css壓縮
+gul-uglify   javascript壓縮
+minimist        使用參數決定是否壓縮
+gulp-if
+
+npm install gulp-minify-css gulp-uglify minimist gulp-if --save
+
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+-develop
+ -js
+  -console
+  -不壓縮
+ -css
+  -不壓縮
+
+-production
+ -js
+  -放棄 console.log，壓縮
+  -css
+   -壓縮
+
+npm install minimist gulp-if --save
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@
+gulp-clean
+gulp-sequence
+
+npm install --save gulp-clean gulp-sequence
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+npm install --only=prod
+npm install --only=dev
+
+///
+npm prune --prod
+
+
+@@@@@@@@@@@@@@@@@@@@@@@@@
+gulp --env production
+
+
+
+
